@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    border:0;
+    padding:0;
+    border:0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.75)
+}
+
+.title{
+    background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Title */
+
+.title_text {
+    @apply mt-2 text-5xl font-extrabold leading-[1.15] text-black z-10 sm:text-8xl;
+}
+
+.title_desc {
+    @apply mt-5 font-bold text-lg text-white z-10 w-screen sm:text-2xl;
+}
+
+.start_button{
+    @apply text-black font-bold relative top-1/4 text-5xl border-4 bg-slate-200 mx-auto px-8 py-4 rounded-lg
+}
+
+/* Dropdown */
+.dropdown{
+    @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[175px] flex flex-col gap-2 justify-end items-end z-20
+}
+
+.dropdown_link {
+    @apply text-base font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* Logo */
+.logo_text{
+    @apply max-sm:hidden font-satoshi font-semibold text-lg text-black tracking-wide
+}
+
+.logo_img {
+    @apply rounded-xl
+}
+
+/* Gradients and Colors*/
+.blue_gradient {
+    @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.orange_gradient {
+    @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.orange_background {
+    @apply bg-red-700 bg-clip-text text-transparent
+}
+
+.orange {
+    @apply text-orange-600
+}
+
+.blue {
+    @apply text-blue-600
+}
+
+/* Flex */
+.flex-center {
+    @apply flex justify-center items-center;
+}
+    
+.flex-start {
+    @apply flex justify-start items-start;
+}
+    
+.flex-end {
+    @apply flex justify-end items-center;
+}
+    
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+/* Buttons */
+.black_btn {
+    @apply rounded-full border border-black bg-black py-1.5 px-5 text-white transition-all hover:bg-white hover:text-black text-center text-sm font-inter flex items-center justify-center;
+}
+
+.genre_btn{
+    @apply text-xl px-2 py-1 bg-slate-100 rounded-md m-2 sm:text-3xl hover:bg-red-600 hover:text-white font-semibold duration-100
+}
+
+.get_movies_btn{
+    @apply px-5 py-3 text-2xl bg-slate-400 rounded-lg font-extrabold md:text-3xl
+}
+
+.fav_btn{
+    @apply font-bold bg-white px-3 py-1 rounded-md hover:bg-red-400
+}
+
+/* Info section */
+.info_title_text{
+    @apply text-3xl font-bold text-black sm:text-5xl
+}
+
+.info_desc {
+    @apply mt-5 text-center
+}
+
+/* Images */
+.title_popcorn_img{
+    @apply w-full h-full absolute top-16 z-0
+}
+
+.popcorn_img{
+    @apply mt-10 w-full rounded-2xl
+}
+
+.movie_theatre_image{
+    @apply w-full h-full absolute top-20 z-0
+}
+
+/* General */
+.med_width{
+    @apply w-4/6
+}
+
+.full_width{
+    @apply w-full
+}
+
+.full_height{
+    @apply h-full top-52
+}
+
+.glassmorphism {
+    @apply rounded-xl border border-gray-200 bg-white/50 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.1)] backdrop-blur p-9;
+}
+
+/* Desc */
+.desc_title_text{
+    @apply text-3xl font-bold text-black sm:text-5xl justify-items-start
+}
+
+/* User Choices */
+.user_genre_list{
+    @apply flex justify-center gap-3 text-center flex-wrap mt-5 items-center font-bold lg:mx-40 md:mt-10 lg:gap-10 
+}
+
+/* Movie Card */
+.movie_container{
+    @apply flex flex-wrap gap-10 justify-center px-5
+}
+
+.movie_card{
+    justify-content: flex-end;
+    min-width: 400px;
+    min-height: 600px;
+    flex: 1;
+    border-radius: 0.5rem;
+}
+
+.movie_card_result{
+    justify-content: flex-end;
+    max-width: 500px;
+    min-height: 600px;
+    flex: 1;
+    border-radius: 0.5rem;
+}
+
+.card_content{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
