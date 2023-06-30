@@ -24,8 +24,8 @@ export default function Nav() {
     }, [] )
 
     return(
-        <nav className="flex-between w-full mb-16 p-4">
-            <Link href='/' className="flex gap-2 flex-center">
+        <nav className="flex w-full mb-6 p-4 justify-around items-center text-center">
+            <Link href='/' className="flex gap-2 flex-center flex-1 flex-start items-center">
                 <Image 
                     src="/assets/images/movie_logo.png"
                     alt="Movie Match Logo"
@@ -36,7 +36,7 @@ export default function Nav() {
                 <p className="logo_text"> Movie Match </p>
             </Link>
 
-            <div className="flex gap-2 text-lg">
+            <div className="flex gap-2 text-base flex-col flex-1 justify-center text-center items-center">
                 <motion.p
                     className="text-white tracking-wide font-semibold"
                 >
@@ -47,28 +47,27 @@ export default function Nav() {
                     alt="TMDB Logo"
                     width={200}
                     height={75}
+                    className=""
                 />
             </div>
 
             {/* Desktop Navigation */}
-            <div className='sm:flex hidden'>
+            <div className='sm:flex hidden md:flex-1 md:justify-end'>
                 { session?.user ? (
-                    <div className='flex gap-3 md:gap-5'>
+                    <div className='flex gap-3 md:gap-5 items-center'>
                         <Link href={{ pathname : '/my_movies', query : {id : session.user.id} }} className='black_btn'>
                             My Movies
                         </Link>
 
                         <button type='button' onClick={signOut} className='outline_btn text-white'>Sign Out</button>
 
-                        <Link href="/profile">
-                            <Image 
-                                src={ session?.user.image }
-                                width={37}
-                                height={37}
-                                className='rounded-full'
-                                alt='profile'
-                            />
-                        </Link>
+                        <Image 
+                            src={ session?.user.image }
+                            width={37}
+                            height={37}
+                            className='rounded-full'
+                            alt='profile'
+                        />
                     </div>
                 ): (
                     <>
@@ -88,7 +87,7 @@ export default function Nav() {
             </div>
             
             {/* Mobile Navigation */}
-            <div className='sm:hidden flex relative'>
+            <div className='sm:hidden flex relative flex-1 flex-end'>
                 {session?.user ? (
                     <div className='flex'>
                         <Image 
@@ -111,7 +110,7 @@ export default function Nav() {
                                 </Link>
 
                                 <Link
-                                    href="/favorites"
+                                    href="/my_movies"
                                     className='dropdown_link'
                                     onClick={ () => setToggleDropDown(false) }
                                 >

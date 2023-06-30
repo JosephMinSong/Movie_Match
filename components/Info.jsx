@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 export default function Info() {
     return(
-        <div className="flex mx-5 gap-10 mb-20">
+        <div className="flex mx-5 gap-10 mb-20 flex-col md:flex-row">
         <section className="flex-1 glassmorphism mt-16 text-lg font-semibold sm:text-2xl">
             <motion.h1
                 className="info_title_text flex-center w-full text-center"
