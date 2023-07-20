@@ -2,14 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 # Movie Match
 ## Project built by Joseph Song
-
 Check out the deployed website at: [Movie Match](https://movie-match-gamma.vercel.app/)
 
+## Table of Contents
+* [General Info](@general-information)
+
+## General Information
+### For those days where you sincerely cannot decide on what movie to watch with friends, family, or significant others - Movie Match has got you covered
+Movie Match is an interactive website that allows you to choose from a diverse list of movie genres. Using your input, Movie Match will generate a list of movies that match your preferences.
 ![Screenshot of Movie Match website](https://github.com/JosephMinSong/Movie_Match/assets/129890601/1e180845-6350-4aa6-9967-ba095a5506f8)
 
-### For those days where you sincerely cannot decide on what movie to watch with friends, family, or significant others - Movie Match has got you covered
 
-Movie Match is an interactive website that allows you to choose from a diverse list of movie genres. Using your input, Movie Match will generate a list of movies that match your preferences.
 
 ![Screenshot of Genre picker](https://github.com/JosephMinSong/Movie_Match/assets/129890601/aae77a9f-93e9-4022-8892-f1b287f48986)
 
