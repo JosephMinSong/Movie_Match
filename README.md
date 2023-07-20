@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Check out the deployed website at: [Movie Match](https://movie-match-gamma.vercel.app/)
 
 ## Table of Contents
-* [General Info](@general-information)
+* [General Info](#general-information)
 
 ## General Information
 ### For those days where you sincerely cannot decide on what movie to watch with friends, family, or significant others - Movie Match has got you covered
