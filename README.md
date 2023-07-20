@@ -4,59 +4,30 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Project built by Joseph Song
 Check out the deployed website at: [Movie Match](https://movie-match-gamma.vercel.app/)
 
-## Table of Contents
+# Table of Contents
 * [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots of website and code](#screenshots-of-website-and-code)
 
 ## General Information
 ### For those days where you sincerely cannot decide on what movie to watch with friends, family, or significant others - Movie Match has got you covered
 Movie Match is an interactive website that allows you to choose from a diverse list of movie genres. Using your input, Movie Match will generate a list of movies that match your preferences.
-![Screenshot of Movie Match website](https://github.com/JosephMinSong/Movie_Match/assets/129890601/1e180845-6350-4aa6-9967-ba095a5506f8)
-
-
-
-![Screenshot of Genre picker](https://github.com/JosephMinSong/Movie_Match/assets/129890601/aae77a9f-93e9-4022-8892-f1b287f48986)
-
 Using Framer-Motion and State in React, Movie Motion creates a single page result container that is interactive with user hover and clicks **without multiple page reloads**. Users who have either created an account with
 us or logged in using their Google account are able to then favorite the movies that interest them. 
 
-```js
-const handleFavorite = (movieId, genreIdArray, backdrop_path, title, description) => {
+## Technologies Used
+- Movie Match is built with Next.JS/React as the primary foundation 
+- MongoDB for it's database and Mongoose to model data to be stored in MongoDB.
+- TailwindCSS for sleak user interface and styling
+- Framer-Motion to create animated movements for different components
+- Next.JS built in Fetch method, for better compatibility, to make API calls to outside databases (TMDB for this project)
 
-    setLogInError()
-
-    if (!session){
-        setLogInError({message : "You must be logged in to favorite movies!"})
-        document.getElementById('title').scrollIntoView({ behavior:'smooth', block:'end', inline:'nearest' })
-        return false
-    }
-        
-
-    setErrors()
-    setSuccess()
-
-    const data = {
-        movieId : movieId,
-        categories : genreIdArray,
-        id : session.user.id,
-        posterPath : backdrop_path,
-        title: title,
-        description : description
-    }
-
-    fetch('api/likes' , {method: "POST", body : JSON.stringify(data)})
-        .then(res => res.json())
-        .then(data => {
-            if (data.hasOwnProperty('error')){
-                setErrors(data)
-            } else {
-                setSuccess(data)
-            }
-        })
-        .catch(err => console.log(err))
-}
-```
-
-Leveraging Next.JS severless functionality and intuitive API calls, Movie Match utilizes MongoDB and Mongoose for fast and reliable user infomation fetching and storing. 
+## Screenshots of Website and Code
+### Landing page of website
+![Screenshot of Movie Match website](https://github.com/JosephMinSong/Movie_Match/assets/129890601/1e180845-6350-4aa6-9967-ba095a5506f8)
+### Vast variety of genres for the user to pick from, all dynamically curated from gathering a genre list from outside API calls
+![Screenshot of Genre picker](https://github.com/JosephMinSong/Movie_Match/assets/129890601/aae77a9f-93e9-4022-8892-f1b287f48986)
+### Leveraging Next.JS severless functionality and intuitive API calls, Movie Match utilizes MongoDB and Mongoose for fast and reliable user infomation fetching and storing. 
 By exporting a handler function, Movie Match is able to handle all of the user input and functionality into one route using RESTful naming conventions. 
 
 ```js
